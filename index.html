@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Salwa Nur Fakhira</title>
+    <!-- Jalur CSS sesuai folder kamu -->
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="CSS/style.css"
+</head>
+<body>
+
+    <div class="container">
+        <!-- Status Header -->
+        <div class="status-bar">
+            <span class="dot"></span> SYSTEM ONLINE
+        </div>
+
+        <p class="tagline"> WELCOME TO MY PORTOFOLIO </p>
+        <h1 class="glow-text">SALWA NUR<br>FAKHIRA</h1>
+
+        <p class="desc">
+            Selamat datang di ruang digital saya! Tempat membagikan pengalaman, keahlian, dan minat.
+        </p>
+
+        <div class="glow-line"></div>
+
+        <!-- Judul Menu -->
+        <div class="menu-title">
+            <span>&lt;/&gt;</span> JELAJAHI PROFIL
+        </div>
+
+        <!-- Tombol Pilihan Menu -->
+        <div class="menu-grid">
+            <button class="menu-btn active" onclick="openTab(event, 'profil')">Profil</button>
+            <button class="menu-btn" onclick="openTab(event, 'motivasi')">Motivasi</button>
+            <button class="menu-btn" onclick="openTab(event, 'media')">Media</button>
+            <button class="menu-btn" onclick="openTab(event, 'sertifikat')">Sertifikat</button>
+            <button class="menu-btn" onclick="openTab(event, 'hobi')">Hobi</button>
+            <button class="menu-btn" onclick="openTab(event, 'penutup')">Penutup</button>
+        </div>
+
+        <!-- Isi Menu 1: Profil -->
+        <div id="profil" class="content-box tab-content" style="display: block;">
+            <div class="profile-card">
+                <div class="profile-img-container">
+                    <img src="poto/09.jpeg" alt="poto/09.jpeg">
+                </div>
+                <h2>Salwa Nur Fakhira</h2>
+                <p class="sub-text">SISWI XI TKJ 3</p>
+            </div>
+            
+            <!-- Perkenalan / Tentang Saya -->
+            <div class="bio-box">
+                <h3>Tentang Saya</h3>
+                <p class="bio">
+                    Halo! Saya SALWA NUR FAKHIRA dari SMKN 3 SOPPENG.selamat datang di portopolio saya! tempat saya berbagi cerita tentang proses belajar,hoby dan hal hal yang menarik lainnya.
+                </p>
+            </div>
+
+            <!-- Data Diri -->
+            <div class="info-list">
+                <h3>Data Diri</h3>
+                <p><strong>Tanggal Lahir:</strong> 16 Agustus 2009</p>
+                <p><strong>Alamat:</strong> Takalala</p>
+                <p><strong>Sekolah:</strong> UPT SMKN 3Soppeng</p>
+                <p><strong>Jurusan:</strong> Teknik Komputer dan Jaringan (TKJ)</p>
+            </div>
+        </div>
+
+        <!-- Isi Menu 2: Motivasi -->
+        <div id="motivasi" class="content-box tab-content" style="display: none;">
+            <h2>Motivasi Hidup</h2>
+            <p class="sub-text">MOTTO & PRINSIP</p>
+            <p class="bio" style="font-style: italic; color: #e096b6;">
+                "Setiap proses dan kegagalan adalah cara belajar untuk menjadi versi terbaik dari diri sendiri. Jangan takut mencoba hal baru, karena masa depan dibangun dari langkah-langkah kecil hari ini."
+            </p>
+            <div class="info-list" style="margin-top: 15px;">
+                <p><strong>Prinsip Utama:</strong> Terus belajar, pantang menyerah, dan tetap rendah hati.</p>
+                <p><strong>Pesan Inspiratif:</strong> Kunci keberhasilan bukan hanya tentang seberapa pintar kita, tetapi seberapa konsisten kita dalam berjuang.</p>
+            </div>
+        </div>
+
+        <!-- Isi Menu 3: Link Media -->
+        <div id="media" class="content-box tab-content" style="display: none;">
+            <h2>Kontak & Media Sosial</h2>
+            <p class="sub-text">HUBUNGI SAYA</p>
+            <div class="info-list">
+                <p><strong>Google / Email:</strong><br> 
+                   <a href="mailto:salwasalwanurfakhira@gmail.com" style="color: #e096b6; text-decoration: none;">salwasalwanurfakhira@gmail.com</a>
+                </p>
+                <p><strong>Instagram:</strong><br> 
+                   <a href="https://www.instagram.com/slwnurfakhira" target="_blank" style="color: #e096b6; text-decoration: none;">@slwnurfakhira</a>
+                </p>
+                <p><strong>TikTok:</strong><br> 
+                   <a href="https://tiktok.com/slwanurfakhira" target="_blank" style="color: #e096b6; text-decoration: none;">Cek TikTok Saya</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Isi Menu 4: Sertifikat -->
+        <div id="sertifikat" class="content-box tab-content" style="display: none;">
+            <h2>Sertifikasi & Prestasi</h2>
+            <p class="sub-text">PORTFOLIO KEAHLIAN</p>
+            <div class="info-list">
+                <p><strong>Sertifikat Keahlian:</strong> </p>
+            </div>
+        </div>
+
+        <!-- Isi Menu 5: Hobi -->
+        <div id="hobi" class="content-box tab-content" style="display: none;">
+            <h2>Minat & Hobi</h2>
+            <p class="sub-text">KEGIATAN FAVORIT</p>
+            <div class="info-list">
+                <p><strong>hoby/aktivitas di luar sekolah:</strong> Memasak 🍳, Bermain Badminton 🏸, serta mencoba hal-hal menarik baru ✨</p>
+            </div>
+        </div>
+
+        <!-- Isi Menu 6: Penutup -->
+        <div id="penutup" class="content-box tab-content" style="display: none;">
+            <h2>Salam Penutup</h2>
+            <p class="sub-text">TERIMA KASIH</p>
+            <div class="info-list">
+                <p>Terima kasih telah berkunjung ke halaman portofolio saya. Semoga harimu menyenangkan dan sukses selalu! ✨</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script Pindah Menu -->
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("menu-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+</html>
