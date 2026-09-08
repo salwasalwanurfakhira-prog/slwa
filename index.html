@@ -1,242 +1,316 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salwa Nur Fakhira // Pink Portofolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    <div class="site-wrapper">
-        <!-- Header Navigasi -->
-        <header class="top-nav">
-            <div class="nav-brand">
-                <span class="pulse-dot"></span>
-                <span>✨ SALWA // TKJ 3</span>
-            </div>
-            <nav class="nav-menu">
-                <a href="#" onclick="switchTab(event, 'home')" class="active">Beranda</a>
-                <a href="#" onclick="switchTab(event, 'profile')">Profil</a>
-                <a href="#" onclick="switchTab(event, 'motivasi')">Motivasi</a>
-                <a href="#" onclick="switchTab(event, 'media')">Media</a>
-                <a href="#" onclick="switchTab(event, 'sertifikat')">Sertifikat</a>
-                <a href="#" onclick="switchTab(event, 'hobi')">Hobi</a>
-                <a href="#" onclick="switchTab(event, 'bukutamu')">Buku Tamu</a>
-                <a href="#" onclick="switchTab(event, 'penutup')">Selesai</a>
-            </nav>
-        </header>
+body {
+    background-color: #fff5f8;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 182, 193, 0.4) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(255, 192, 203, 0.3) 0%, transparent 40%);
+    color: #4a4a4a;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
 
-        <!-- 1. BERANDA & MINI GAME -->
-        <div id="home" class="tab-pane" style="display: block;">
-            <section class="hero-grid">
-                <div class="hero-left">
-                    <div class="status-badge">🌸 PINK VIBES // ACTIVE</div>
-                    <h1 class="main-heading">Halo, Saya<br><span class="highlight-name">Salwa Nur Fakhira</span></h1>
-                    <p class="hero-description">
-                        Merancang topologi dan membangun jaringan komputer dengan penuh kreativitas. Mainkan mini-game kabel di samping untuk menyalakan server!
-                    </p>
-                    <div class="action-box">
-                        <a href="#" onclick="switchTab(event, 'profile')" class="btn-explore">Eksplor Profil &rarr;</a>
-                    </div>
-                </div>
+.site-wrapper {
+    width: 100%;
+    max-width: 960px;
+}
 
-                <div class="hero-right">
-                    <div class="game-container">
-                        <div class="game-header">
-                            <span class="game-title">MINI-GAME: KABEL</span>
-                            <span id="gameStatus" class="status-offline">MATI</span>
-                        </div>
-                        <div class="game-body">
-                            <p class="game-instruction">Klik kotak untuk menyambungkan jalur:</p>
-                            <div class="cable-grid">
-                                <button class="cable-node" onclick="rotateCable(this)">✖</button>
-                                <button class="cable-node" onclick="rotateCable(this)">✖</button>
-                                <button class="cable-node" onclick="rotateCable(this)">✖</button>
-                                <button class="cable-node" onclick="rotateCable(this)">✖</button>
-                            </div>
-                            <button class="btn-check" onclick="checkNetwork()">CEK KONEKSI SERVER</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    border-bottom: 2px dashed #ffb6c1;
+    padding-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
 
-        <!-- 2. PROFIL -->
-        <div id="profile" class="tab-pane" style="display: none;">
-            <section class="profile-section">
-                <h2 class="section-title">💗 Identitas Karakter</h2>
-                <div class="profile-card">
-                    <div class="photo-wrapper">
-                        <img src="09.jpeg" alt="Salwa Nur Fakhira">
-                    </div>
-                    <div class="bio-wrapper">
-                        <blockquote class="bio-quote">
-                            "Sistem siap! Halo, saya Salwa Nur Fakhira. Menjelajahi dunia jaringan komputer dan teknologi dengan penuh semangat dan sentuhan estetik."
-                        </blockquote>
-                        <ul class="data-specs">
-                            <li><strong>Nama:</strong> Salwa Nur Fakhira</li>
-                            <li><strong>Kelas:</strong> XI TKJ 3</li>
-                            <li><strong>Lokasi:</strong> Takalala, Soppeng</li>
-                            <li><strong>Jurusan:</strong> Teknik Komputer &amp; Jaringan</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </div>
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #d63384;
+}
 
-        <!-- 3. MOTIVASI -->
-        <div id="motivasi" class="tab-pane" style="display: none;">
-            <section class="profile-section">
-                <h2 class="section-title">💖 Prinsip &amp; Filosofi</h2>
-                <div class="profile-card">
-                    <p class="bio-quote">"Setiap proses dan kegagalan adalah cara belajar untuk menjadi versi terbaik dari diri sendiri. Tetap semangat dan jangan takut mencoba hal baru!"</p>
-                </div>
-            </section>
-        </div>
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #ff69b4;
+}
 
-        <!-- 4. MEDIA SOSIAL -->
-        <div id="media" class="tab-pane" style="display: none;">
-            <section class="profile-section">
-                <h2 class="section-title">🌸 Koneksi Media Sosial</h2>
-                <div class="data-specs" style="display: flex; gap: 15px; flex-direction: column;">
-                    <a href="mailto:salwasalwanurfakhira@gmail.com" class="btn-explore" style="text-align:center;">Email: salwasalwanurfakhira@gmail.com</a>
-                    <a href="https://www.instagram.com/slwnurfakhira" target="_blank" class="btn-explore" style="text-align:center;">Instagram: @slwnurfakhira</a>
-                </div>
-            </section>
-        </div>
+.nav-menu {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
 
-        <!-- 5. SERTIFIKAT -->
-        <div id="sertifikat" class="tab-pane" style="display: none;">
-            <section class="profile-section">
-                <h2 class="section-title">🌷 Log Prestasi &amp; Sertifikat</h2>
-                <div class="profile-card" style="justify-content: center;">
-                    <img src="1.jpeg" alt="Sertifikat Keahlian" style="max-width: 100%; border-radius: 12px; border: 2px solid #ffb6c1;">
-                </div>
-            </section>
-        </div>
+.nav-menu a {
+    text-decoration: none;
+    color: #888;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
 
-        <!-- 6. HOBI -->
-        <div id="hobi" class="tab-pane" style="display: none;">
-            <section class="profile-section">
-                <h2 class="section-title">🎀 Hobi &amp; Keahlian</h2>
-                <div class="profile-card">
-                    <p class="bio-quote">🍳 <strong>Memasak</strong> | 🏸 <strong>Badminton</strong> | ✨ <strong>Eksplorasi Teknologi</strong></p>
-                </div>
-            </section>
-        </div>
+.nav-menu a:hover, .nav-menu a.active {
+    color: #d63384;
+    font-weight: 600;
+}
 
-        <!-- 7. BUKU TAMU -->
-        <div id="bukutamu" class="tab-pane" style="display: none;">
-            <section class="profile-section">
-                <h2 class="section-title">💌 Buku Tamu</h2>
-                <form id="bukuTamuForm" class="profile-card" style="flex-direction: column; gap: 15px; align-items: stretch;">
-                    <div>
-                        <label style="font-size: 0.8rem; color: #d63384; display: block; margin-bottom: 5px; font-weight: 600;">NAMA PENGUNJUNG:</label>
-                        <input type="text" id="Nama" name="nama" required placeholder="Masukkan nama..." style="width:100%; padding:10px; background:#fff0f5; border:1px solid #ffb6c1; color:#333; border-radius:8px; font-family:inherit;">
-                    </div>
-                    <div>
-                        <label style="font-size: 0.8rem; color: #d63384; display: block; margin-bottom: 5px; font-weight: 600;">PESAN ANDA:</label>
-                        <textarea id="Pesan" name="pesan" required placeholder="Tuliskan pesanmu..." style="width:100%; padding:10px; background:#fff0f5; border:1px solid #ffb6c1; color:#333; border-radius:8px; height: 80px; font-family:inherit;"></textarea>
-                    </div>
-                    <button type="submit" id="submitBtn" class="btn-explore">KIRIM PESAN</button>
-                </form>
-                <div id="status" style="margin-top: 10px; font-size: 0.85rem; color: #d63384; text-align: center; font-weight: 600;"></div>
+.hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 50px;
+}
 
-                <div style="margin-top: 25px;">
-                    <h3 style="font-size: 1rem; color: #555; margin-bottom: 12px;">// PESAN YANG MASUK</h3>
-                    <div id="messageList" style="display: flex; flex-direction: column; gap: 10px;"></div>
-                </div>
-            </section>
-        </div>
+@media(min-width: 768px) {
+    .hero-grid {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 
-        <!-- 8. PENUTUP -->
-        <div id="penutup" class="tab-pane" style="display: none;">
-            <section class="profile-section">
-                <h2 class="section-title">✨ Selesai</h2>
-                <div class="profile-card">
-                    <p class="bio-quote">Terima kasih telah berkunjung ke portofolio saya! Semoga harimu menyenangkan penuh warna! 🌸</p>
-                </div>
-            </section>
-        </div>
+.hero-left {
+    flex: 1;
+}
 
-    </div>
+.status-badge {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.75rem;
+    color: #d63384;
+    background: #ffe4e1;
+    padding: 5px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 12px;
+    font-weight: 700;
+    border: 1px solid #ffb6c1;
+}
 
-    <script>
-        function switchTab(evt, tabId) {
-            evt.preventDefault();
-            let panes = document.getElementsByClassName("tab-pane");
-            for (let i = 0; i < panes.length; i++) {
-                panes[i].style.display = "none";
-            }
-            let links = document.querySelectorAll(".nav-menu a");
-            for (let i = 0; i < links.length; i++) {
-                links[i].classList.remove("active");
-            }
-            document.getElementById(tabId).style.display = "block";
-            evt.currentTarget.classList.add("active");
-        }
+.main-heading {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    font-family: 'Quicksand', sans-serif;
+}
 
-        const symbols = ['/', '\\', '—', '|'];
-        function rotateCable(btn) {
-            let currentText = btn.textContent;
-            let nextIndex = (symbols.indexOf(currentText) + 1) % symbols.length;
-            btn.textContent = symbols[nextIndex];
-            btn.classList.remove('connected');
-        }
+.highlight-name {
+    color: #ff1493;
+}
 
-        function checkNetwork() {
-            const nodes = document.querySelectorAll('.cable-node');
-            const statusEl = document.getElementById('gameStatus');
-            nodes.forEach(node => {
-                node.classList.add('connected');
-                node.textContent = '💖';
-            });
-            statusEl.textContent = 'AKTIF';
-            statusEl.className = 'status-online';
-            alert('Yeay! Jaringan berhasil terhubung dan server aktif! 🎉');
-        }
+.hero-description {
+    font-size: 0.92rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 420px;
+}
 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx7QCnmTfHoK0AU8h283YVpBUv-DkvgDcr58xSkdYSBUcvwmqkw7Gycd8hiRKdCj0rB/exec';
-        const form = document.getElementById('bukuTamuForm');
-        const btn = document.getElementById('submitBtn');
-        const statusDiv = document.getElementById('status');
-        const messageList = document.getElementById('messageList');
+.btn-explore {
+    display: inline-block;
+    background: #ff69b4;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+}
 
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            btn.disabled = true;
-            btn.textContent = 'MENGIRIM...';
+.btn-explore:hover {
+    background: #ff1493;
+    transform: translateY(-2px);
+}
 
-            const formData = new FormData(form);
-            const nama = formData.get('nama');
-            const pesan = formData.get('pesan');
+.hero-right {
+    width: 100%;
+    max-width: 320px;
+}
 
-            fetch(scriptURL, { method: 'POST', body: formData})
-                .then(response => selesaiKirim(nama, pesan))
-                .catch(error => selesaiKirim(nama, pesan));
-        });
+.game-container {
+    background: #ffffff;
+    border: 2px solid #ffb6c1;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.3);
+}
 
-        function selesaiKirim(nama, pesan) {
-            statusDiv.textContent = '>> Pesan berhasil terkirim!';
-            const now = new Date();
-            const dateStr = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}, ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+.game-header {
+    background: #fff0f5;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffb6c1;
+}
 
-            const newCard = document.createElement('div');
-            newCard.style.cssText = "background: #fff0f5; border: 1px solid #ffb6c1; padding: 12px; border-radius: 10px;";
-            newCard.innerHTML = `
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                    <strong style="color: #d63384; font-size: 0.9rem;">${nama}</strong>
-                    <span style="font-size: 0.75rem; color: #888;">${dateStr}</span>
-                </div>
-                <p style="font-size: 0.9rem; color: #444; margin: 0;">${pesan}</p>
-            `;
-            messageList.prepend(newCard);
-            form.reset();
-            btn.disabled = false;
-            btn.textContent = 'KIRIM PESAN';
-        }
-    </script>
-</body>
-</html>
+.game-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.75rem;
+    color: #d63384;
+    font-weight: bold;
+}
+
+.status-offline {
+    font-size: 0.65rem;
+    background: #ff6b6b;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+.status-online {
+    font-size: 0.65rem;
+    background: #20c997;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+.game-body {
+    padding: 16px;
+    text-align: center;
+}
+
+.game-instruction {
+    font-size: 0.78rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.cable-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.cable-node {
+    background: #fff5f8;
+    border: 2px solid #ffb6c1;
+    color: #888;
+    font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cable-node:hover {
+    border-color: #ff69b4;
+    color: #ff1493;
+    background: #ffe4e1;
+}
+
+.cable-node.connected {
+    border-color: #20c997;
+    background: rgba(32, 201, 151, 0.1);
+    color: #20c997;
+}
+
+.btn-check {
+    width: 100%;
+    background: #fff0f5;
+    border: 1px solid #ffb6c1;
+    color: #d63384;
+    padding: 8px;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.75rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.btn-check:hover {
+    background: #ff69b4;
+    color: #fff;
+}
+
+.profile-section {
+    border-top: 2px dashed #ffb6c1;
+    padding-top: 30px;
+}
+
+.section-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 18px;
+}
+
+.profile-card {
+    background: #ffffff;
+    border: 2px solid #ffb6c1;
+    border-radius: 16px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.2);
+}
+
+@media(min-width: 600px) {
+    .profile-card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.photo-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #ffb6c1;
+    flex-shrink: 0;
+}
+
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bio-quote {
+    color: #666;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.data-specs {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.88rem;
+    color: #666;
+}
+
+.data-specs strong {
+    color: #333;
+}
