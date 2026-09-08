@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salwa Nur Fakhira // Portofolio & Game</title>
+    <title>Salwa Nur Fakhira // Pink Portofolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="site-wrapper">
-        <!-- Navigasi Atas -->
+        <!-- Header Navigasi -->
         <header class="top-nav">
             <div class="nav-brand">
                 <span class="pulse-dot"></span>
-                <span>XI TKJ 3 // SOPPENG</span>
+                <span>✨ SALWA // TKJ 3</span>
             </div>
             <nav class="nav-menu">
                 <a href="#" onclick="switchTab(event, 'home')" class="active">Beranda</a>
                 <a href="#" onclick="switchTab(event, 'profile')">Profil</a>
                 <a href="#" onclick="switchTab(event, 'motivasi')">Motivasi</a>
-                <a href="#" onclick="switchTab(event, 'media')">Media Sosial</a>
+                <a href="#" onclick="switchTab(event, 'media')">Media</a>
                 <a href="#" onclick="switchTab(event, 'sertifikat')">Sertifikat</a>
                 <a href="#" onclick="switchTab(event, 'hobi')">Hobi</a>
                 <a href="#" onclick="switchTab(event, 'bukutamu')">Buku Tamu</a>
-                <a href="#" onclick="switchTab(event, 'penutup')">Penutup</a>
+                <a href="#" onclick="switchTab(event, 'penutup')">Selesai</a>
             </nav>
         </header>
 
@@ -32,10 +32,10 @@
         <div id="home" class="tab-pane" style="display: block;">
             <section class="hero-grid">
                 <div class="hero-left">
-                    <div class="status-badge">&gt;&gt; MODE_INTERAKTIF</div>
+                    <div class="status-badge">🌸 PINK VIBES // ACTIVE</div>
                     <h1 class="main-heading">Halo, Saya<br><span class="highlight-name">Salwa Nur Fakhira</span></h1>
                     <p class="hero-description">
-                        Merancang topologi dan membangun jaringan komputer. Mainkan mini-game perbaikan kabel di samping untuk menyalakan server!
+                        Merancang topologi dan membangun jaringan komputer dengan penuh kreativitas. Mainkan mini-game kabel di samping untuk menyalakan server!
                     </p>
                     <div class="action-box">
                         <a href="#" onclick="switchTab(event, 'profile')" class="btn-explore">Eksplor Profil &rarr;</a>
@@ -45,16 +45,16 @@
                 <div class="hero-right">
                     <div class="game-container">
                         <div class="game-header">
-                            <span class="game-title">MINI-GAME: PERBAIKI KABEL</span>
+                            <span class="game-title">MINI-GAME: KABEL</span>
                             <span id="gameStatus" class="status-offline">MATI</span>
                         </div>
                         <div class="game-body">
-                            <p class="game-instruction">Klik kotak kabel untuk menyambungkan jalurnya:</p>
+                            <p class="game-instruction">Klik kotak untuk menyambungkan jalur:</p>
                             <div class="cable-grid">
-                                <button class="cable-node" onclick="rotateCable(this)">断</button>
-                                <button class="cable-node" onclick="rotateCable(this)">断</button>
-                                <button class="cable-node" onclick="rotateCable(this)">断</button>
-                                <button class="cable-node" onclick="rotateCable(this)">断</button>
+                                <button class="cable-node" onclick="rotateCable(this)">✖</button>
+                                <button class="cable-node" onclick="rotateCable(this)">✖</button>
+                                <button class="cable-node" onclick="rotateCable(this)">✖</button>
+                                <button class="cable-node" onclick="rotateCable(this)">✖</button>
                             </div>
                             <button class="btn-check" onclick="checkNetwork()">CEK KONEKSI SERVER</button>
                         </div>
@@ -66,14 +66,14 @@
         <!-- 2. PROFIL -->
         <div id="profile" class="tab-pane" style="display: none;">
             <section class="profile-section">
-                <h2 class="section-title">Identitas Karakter</h2>
+                <h2 class="section-title">💗 Identitas Karakter</h2>
                 <div class="profile-card">
                     <div class="photo-wrapper">
                         <img src="09.jpeg" alt="Salwa Nur Fakhira">
                     </div>
                     <div class="bio-wrapper">
                         <blockquote class="bio-quote">
-                            "Sistem siap! Halo, saya Salwa Nur Fakhira. Menjelajahi dunia jaringan komputer, teknologi, dan kreativitas digital dengan penuh semangat."
+                            "Sistem siap! Halo, saya Salwa Nur Fakhira. Menjelajahi dunia jaringan komputer dan teknologi dengan penuh semangat dan sentuhan estetik."
                         </blockquote>
                         <ul class="data-specs">
                             <li><strong>Nama:</strong> Salwa Nur Fakhira</li>
@@ -89,9 +89,9 @@
         <!-- 3. MOTIVASI -->
         <div id="motivasi" class="tab-pane" style="display: none;">
             <section class="profile-section">
-                <h2 class="section-title">&gt; PRINSIP &amp; FILOSOFI</h2>
+                <h2 class="section-title">💖 Prinsip &amp; Filosofi</h2>
                 <div class="profile-card">
-                    <p class="bio-quote">"Setiap proses dan kegagalan adalah cara belajar untuk menjadi versi terbaik dari diri sendiri. Jangan takut mencoba hal baru, karena masa depan dibangun dari langkah-langkah kecil hari ini."</p>
+                    <p class="bio-quote">"Setiap proses dan kegagalan adalah cara belajar untuk menjadi versi terbaik dari diri sendiri. Tetap semangat dan jangan takut mencoba hal baru!"</p>
                 </div>
             </section>
         </div>
@@ -99,7 +99,7 @@
         <!-- 4. MEDIA SOSIAL -->
         <div id="media" class="tab-pane" style="display: none;">
             <section class="profile-section">
-                <h2 class="section-title">&gt; KONEKSI MEDIA SOSIAL</h2>
+                <h2 class="section-title">🌸 Koneksi Media Sosial</h2>
                 <div class="data-specs" style="display: flex; gap: 15px; flex-direction: column;">
                     <a href="mailto:salwasalwanurfakhira@gmail.com" class="btn-explore" style="text-align:center;">Email: salwasalwanurfakhira@gmail.com</a>
                     <a href="https://www.instagram.com/slwnurfakhira" target="_blank" class="btn-explore" style="text-align:center;">Instagram: @slwnurfakhira</a>
@@ -110,9 +110,9 @@
         <!-- 5. SERTIFIKAT -->
         <div id="sertifikat" class="tab-pane" style="display: none;">
             <section class="profile-section">
-                <h2 class="section-title">&gt; LOG PRESTASI &amp; SERTIFIKAT</h2>
+                <h2 class="section-title">🌷 Log Prestasi &amp; Sertifikat</h2>
                 <div class="profile-card" style="justify-content: center;">
-                    <img src="poto/sertifikat 1.jpeg" alt="Sertifikat Keahlian" style="max-width: 100%; border-radius: 6px;">
+                    <img src="1.jpeg" alt="Sertifikat Keahlian" style="max-width: 100%; border-radius: 12px; border: 2px solid #ffb6c1;">
                 </div>
             </section>
         </div>
@@ -120,7 +120,7 @@
         <!-- 6. HOBI -->
         <div id="hobi" class="tab-pane" style="display: none;">
             <section class="profile-section">
-                <h2 class="section-title">&gt; HOBI &amp; KEAHLIAN</h2>
+                <h2 class="section-title">🎀 Hobi &amp; Keahlian</h2>
                 <div class="profile-card">
                     <p class="bio-quote">🍳 <strong>Memasak</strong> | 🏸 <strong>Badminton</strong> | ✨ <strong>Eksplorasi Teknologi</strong></p>
                 </div>
@@ -130,26 +130,23 @@
         <!-- 7. BUKU TAMU -->
         <div id="bukutamu" class="tab-pane" style="display: none;">
             <section class="profile-section">
-                <h2 class="section-title">&gt; BUKU TAMU</h2>
+                <h2 class="section-title">💌 Buku Tamu</h2>
                 <form id="bukuTamuForm" class="profile-card" style="flex-direction: column; gap: 15px; align-items: stretch;">
                     <div>
-                        <label style="font-size: 0.8rem; color: #8b949e; display: block; margin-bottom: 5px;">NAMA PENGUNJUNG:</label>
-                        <input type="text" id="Nama" name="nama" required placeholder="Masukkan nama..." style="width:100%; padding:10px; background:#0d1117; border:1px solid #30363d; color:#fff; border-radius:6px; font-family:inherit;">
+                        <label style="font-size: 0.8rem; color: #d63384; display: block; margin-bottom: 5px; font-weight: 600;">NAMA PENGUNJUNG:</label>
+                        <input type="text" id="Nama" name="nama" required placeholder="Masukkan nama..." style="width:100%; padding:10px; background:#fff0f5; border:1px solid #ffb6c1; color:#333; border-radius:8px; font-family:inherit;">
                     </div>
                     <div>
-                        <label style="font-size: 0.8rem; color: #8b949e; display: block; margin-bottom: 5px;">PESAN ANDA:</label>
-                        <textarea id="Pesan" name="pesan" required placeholder="Tuliskan pesanmu..." style="width:100%; padding:10px; background:#0d1117; border:1px solid #30363d; color:#fff; border-radius:6px; height: 80px; font-family:inherit;"></textarea>
+                        <label style="font-size: 0.8rem; color: #d63384; display: block; margin-bottom: 5px; font-weight: 600;">PESAN ANDA:</label>
+                        <textarea id="Pesan" name="pesan" required placeholder="Tuliskan pesanmu..." style="width:100%; padding:10px; background:#fff0f5; border:1px solid #ffb6c1; color:#333; border-radius:8px; height: 80px; font-family:inherit;"></textarea>
                     </div>
                     <button type="submit" id="submitBtn" class="btn-explore">KIRIM PESAN</button>
                 </form>
-                <div id="status" style="margin-top: 10px; font-size: 0.85rem; color: #3fb950; text-align: center;"></div>
+                <div id="status" style="margin-top: 10px; font-size: 0.85rem; color: #d63384; text-align: center; font-weight: 600;"></div>
 
-                <!-- Daftar Pesan Masuk di Bawah -->
                 <div style="margin-top: 25px;">
-                    <h3 style="font-size: 1rem; color: #f0f6fc; margin-bottom: 12px;">// PESAN YANG MASUK</h3>
-                    <div id="messageList" style="display: flex; flex-direction: column; gap: 10px;">
-                        <!-- Balasan orang akan muncul otomatis di sini -->
-                    </div>
+                    <h3 style="font-size: 1rem; color: #555; margin-bottom: 12px;">// PESAN YANG MASUK</h3>
+                    <div id="messageList" style="display: flex; flex-direction: column; gap: 10px;"></div>
                 </div>
             </section>
         </div>
@@ -157,9 +154,9 @@
         <!-- 8. PENUTUP -->
         <div id="penutup" class="tab-pane" style="display: none;">
             <section class="profile-section">
-                <h2 class="section-title">&gt; SELESAI</h2>
+                <h2 class="section-title">✨ Selesai</h2>
                 <div class="profile-card">
-                    <p class="bio-quote">Terima kasih telah berkunjung ke portofolio saya! Semoga harimu menyenangkan dan sukses selalu! ✨</p>
+                    <p class="bio-quote">Terima kasih telah berkunjung ke portofolio saya! Semoga harimu menyenangkan penuh warna! 🌸</p>
                 </div>
             </section>
         </div>
@@ -181,7 +178,6 @@
             evt.currentTarget.classList.add("active");
         }
 
-        // Mini-Game Kabel
         const symbols = ['/', '\\', '—', '|'];
         function rotateCable(btn) {
             let currentText = btn.textContent;
@@ -195,14 +191,13 @@
             const statusEl = document.getElementById('gameStatus');
             nodes.forEach(node => {
                 node.classList.add('connected');
-                node.textContent = '⚡';
+                node.textContent = '💖';
             });
-            statusEl.textContent = 'AKTIF (AMAN)';
+            statusEl.textContent = 'AKTIF';
             statusEl.className = 'status-online';
             alert('Yeay! Jaringan berhasil terhubung dan server aktif! 🎉');
         }
 
-        // Logika Buku Tamu
         const scriptURL = 'https://script.google.com/macros/s/AKfycbx7QCnmTfHoK0AU8h283YVpBUv-DkvgDcr58xSkdYSBUcvwmqkw7Gycd8hiRKdCj0rB/exec';
         const form = document.getElementById('bukuTamuForm');
         const btn = document.getElementById('submitBtn');
@@ -219,32 +214,25 @@
             const pesan = formData.get('pesan');
 
             fetch(scriptURL, { method: 'POST', body: formData})
-                .then(response => {
-                    selesaiKirim(nama, pesan);
-                })
-                .catch(error => {
-                    selesaiKirim(nama, pesan);
-                });
+                .then(response => selesaiKirim(nama, pesan))
+                .catch(error => selesaiKirim(nama, pesan));
         });
 
         function selesaiKirim(nama, pesan) {
             statusDiv.textContent = '>> Pesan berhasil terkirim!';
-            
             const now = new Date();
             const dateStr = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}, ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
 
             const newCard = document.createElement('div');
-            newCard.style.cssText = "background: #161b22; border: 1px solid #30363d; padding: 12px; border-radius: 6px;";
+            newCard.style.cssText = "background: #fff0f5; border: 1px solid #ffb6c1; padding: 12px; border-radius: 10px;";
             newCard.innerHTML = `
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                    <strong style="color: #db61a2; font-size: 0.9rem;">${nama}</strong>
-                    <span style="font-size: 0.75rem; color: #8b949e;">${dateStr}</span>
+                    <strong style="color: #d63384; font-size: 0.9rem;">${nama}</strong>
+                    <span style="font-size: 0.75rem; color: #888;">${dateStr}</span>
                 </div>
-                <p style="font-size: 0.9rem; color: #c9d1d9; margin: 0;">${pesan}</p>
+                <p style="font-size: 0.9rem; color: #444; margin: 0;">${pesan}</p>
             `;
-            
             messageList.prepend(newCard);
-
             form.reset();
             btn.disabled = false;
             btn.textContent = 'KIRIM PESAN';
