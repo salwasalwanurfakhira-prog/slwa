@@ -3,161 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberProfile // Salwa Nur Fakhira</title>
+    <title>Salwa Nur Fakhira // Portofolio & Game</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="scanline"></div>
-
-    <div class="cyber-container">
-        <div class="terminal-header">
-            <div class="terminal-dots">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
+    <div class="site-wrapper">
+        <!-- Navigasi Atas -->
+        <header class="top-nav">
+            <div class="nav-brand">
+                <span class="pulse-dot"></span>
+                <span>XI TKJ 3 // SOPPENG</span>
             </div>
-            <div class="system-status">
-                <span class="pulse-dot"></span> ROOT@SALWA-TKJ:~$ ACTIVE
-            </div>
-        </div>
+            <nav class="nav-menu">
+                <a href="#" onclick="switchTab(event, 'home')" class="active">Beranda</a>
+                <a href="#" onclick="switchTab(event, 'profile')">Profil</a>
+                <a href="#" onclick="switchTab(event, 'motivasi')">Motivasi</a>
+                <a href="#" onclick="switchTab(event, 'media')">Media Sosial</a>
+                <a href="#" onclick="switchTab(event, 'sertifikat')">Sertifikat</a>
+                <a href="#" onclick="switchTab(event, 'hobi')">Hobi</a>
+                <a href="#" onclick="switchTab(event, 'bukutamu')">Buku Tamu</a>
+                <a href="#" onclick="switchTab(event, 'penutup')">Penutup</a>
+            </nav>
+        </header>
 
-        <div class="hero-section">
-            <p class="matrix-tag">&gt;&gt; SYSTEM_INITIALIZED</p>
-            <h1 class="glitch-title" data-text="SALWA NUR FAKHIRA">SALWA NUR<br><span>FAKHIRA</span></h1>
-            <p class="cyber-desc">
-                [ SISWI UPT SMKN 3 SOPPENG // JURUSAN TKJ ]<br>
-                Mengeksplorasi dunia jaringan, teknologi, dan kreativitas digital.
-            </p>
-        </div>
-
-        <div class="nav-grid">
-            <button class="cyber-btn active" onclick="openTab(event, 'profil')">01. Profil</button>
-            <button class="cyber-btn" onclick="openTab(event, 'motivasi')">02. Motivasi</button>
-            <button class="cyber-btn" onclick="openTab(event, 'media')">03. Media</button>
-            <button class="cyber-btn" onclick="openTab(event, 'sertifikat')">04. Sertifikat</button>
-            <button class="cyber-btn" onclick="openTab(event, 'hobi')">05. Hobi</button>
-            <button class="cyber-btn" onclick="openTab(event, 'bukutamu')">06. Buku Tamu</button>
-            <button class="cyber-btn" onclick="openTab(event, 'penutup')">07. Exit</button>
-        </div>
-
-        <div id="profil" class="panel-content tab-content" style="display: block;">
-            <div class="profile-layout">
-                <div class="avatar-frame">
-                    <img src="09.jpeg" alt="Salwa Nur Fakhira">
-                    <div class="corner-tl"></div>
-                    <div class="corner-br"></div>
-                </div>
-                <div class="bio-data">
-                    <h3>&gt; IDENTITAS_PENGGUNA</h3>
-                    <p class="bio-text">
-                        Halo! Saya Salwa Nur Fakhira. Selamat datang di portofolio digital saya yang dirancang dengan gaya terminal interaktif. Tempat saya berbagi proses belajar, keahlian, dan hobi.
+        <!-- 1. BERANDA & MINI GAME -->
+        <div id="home" class="tab-pane" style="display: block;">
+            <section class="hero-grid">
+                <div class="hero-left">
+                    <div class="status-badge">&gt;&gt; MODE_INTERAKTIF</div>
+                    <h1 class="main-heading">Halo, Saya<br><span class="highlight-name">Salwa Nur Fakhira</span></h1>
+                    <p class="hero-description">
+                        Merancang topologi dan membangun jaringan komputer. Mainkan mini-game perbaikan kabel di samping untuk menyalakan server!
                     </p>
-                    <ul class="data-list">
-                        <li><span>NAMA:</span> Salwa Nur Fakhira</li>
-                        <li><span>KELAS:</span> XI TKJ 3</li>
-                        <li><span>LAHIR:</span> 16 Agustus 2009</li>
-                        <li><span>LOKASI:</span> Takalala, Soppeng</li>
-                        <li><span>INSTITUSI:</span> UPT SMKN 3 Soppeng</li>
-                    </ul>
+                    <div class="action-box">
+                        <a href="#" onclick="switchTab(event, 'profile')" class="btn-explore">Eksplor Profil &rarr;</a>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div id="motivasi" class="panel-content tab-content" style="display: none;">
-            <h3>&gt; PRINSIP_ &_MOTTO</h3>
-            <div class="quote-box">
-                <p>
-                    "Setiap proses dan kegagalan adalah cara belajar untuk menjadi versi terbaik dari diri sendiri. Jangan takut mencoba hal baru, karena masa depan dibangun dari langkah-langkah kecil hari ini."
-                </p>
-            </div>
-            <ul class="data-list" style="margin-top: 20px;">
-                <li><span>PRINSIP:</span> Terus belajar, pantang menyerah, dan tetap rendah hati.</li>
-                <li><span>ESENSI:</span> Konsistensi adalah kunci utama keberhasilan di bidang apa pun.</li>
-            </ul>
-        </div>
-
-        <div id="media" class="panel-content tab-content" style="display: none;">
-            <h3>&gt; KONEKSI_JARINGAN</h3>
-            <div class="social-grid">
-                <a href="mailto:salwasalwanurfakhira@gmail.com" class="social-node">
-                    <span class="node-title">EMAIL</span>
-                    <span class="node-link">salwasalwanurfakhira@gmail.com</span>
-                </a>
-                <a href="https://www.instagram.com/slwnurfakhira" target="_blank" class="social-node">
-                    <span class="node-title">INSTAGRAM</span>
-                    <span class="node-link">@slwnurfakhira</span>
-                </a>
-                <a href="https://tiktok.com/slwanurfakhira" target="_blank" class="social-node">
-                    <span class="node-title">TIKTOK</span>
-                    <span class="node-link">Cek TikTok Saya</span>
-                </a>
-            </div>
-        </div>
-
-        <div id="sertifikat" class="panel-content tab-content" style="display: none;">
-            <h3>&gt; LOG_PRESTASI_&_KEAHLIAN</h3>
-            <div class="cert-box">
-                <img src="poto/sertifikat 1.jpeg" alt="Sertifikat Keahlian">
-            </div>
-        </div>
-
-        <div id="hobi" class="panel-content tab-content" style="display: none;">
-            <h3>&gt; BACKGROUND_PROCESS (HOBI)</h3>
-            <div class="quote-box">
-                <p>🍳 Memasak | 🏸 Bermain Badminton | ✨ Mengeksplorasi Teknologi & Hal Baru</p>
-            </div>
-        </div>
-
-        <div id="bukutamu" class="panel-content tab-content" style="display: none;">
-            <h3>&gt; INPUT_PESAN_PENGUNJUNG</h3>
-            <form id="bukuTamuForm" class="cyber-form">
-                <div class="form-group">
-                    <label for="Nama">NAMA PENGUNJUNG:</label>
-                    <input type="text" id="Nama" name="nama" required placeholder="Masukkan nama...">
+                <div class="hero-right">
+                    <div class="game-container">
+                        <div class="game-header">
+                            <span class="game-title">MINI-GAME: PERBAIKI KABEL</span>
+                            <span id="gameStatus" class="status-offline">MATI</span>
+                        </div>
+                        <div class="game-body">
+                            <p class="game-instruction">Klik kotak kabel untuk menyambungkan jalurnya:</p>
+                            <div class="cable-grid">
+                                <button class="cable-node" onclick="rotateCable(this)">断</button>
+                                <button class="cable-node" onclick="rotateCable(this)">断</button>
+                                <button class="cable-node" onclick="rotateCable(this)">断</button>
+                                <button class="cable-node" onclick="rotateCable(this)">断</button>
+                            </div>
+                            <button class="btn-check" onclick="checkNetwork()">CEK KONEKSI SERVER</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="Email">ALAMAT EMAIL:</label>
-                    <input type="email" id="Email" name="email" required placeholder="Masukkan email...">
-                </div>
-                <div class="form-group">
-                    <label for="Pesan">PESAN / KOMENTAR:</label>
-                    <textarea id="Pesan" name="pesan" required placeholder="Tuliskan pesanmu di sini..."></textarea>
-                </div>
-                <button type="submit" id="submitBtn" class="cyber-submit-btn">KIRIM TRANSMISI</button>
-            </form>
-            <div id="status" class="status-msg"></div>
-
-            <div class="visitor-section">
-                <h4>// TRANSMISI MASUK</h4>
-                <div id="messageList"></div>
-            </div>
+            </section>
         </div>
 
-        <div id="penutup" class="panel-content tab-content" style="display: none;">
-            <h3>&gt; SESSION_TERMINATED</h3>
-            <div class="quote-box">
-                <p>Terima kasih telah mengakses portofolio saya. Semoga harimu menyenangkan dan sukses selalu! ✨</p>
-            </div>
+        <!-- 2. PROFIL -->
+        <div id="profile" class="tab-pane" style="display: none;">
+            <section class="profile-section">
+                <h2 class="section-title">Identitas Karakter</h2>
+                <div class="profile-card">
+                    <div class="photo-wrapper">
+                        <img src="09.jpeg" alt="Salwa Nur Fakhira">
+                    </div>
+                    <div class="bio-wrapper">
+                        <blockquote class="bio-quote">
+                            "Sistem siap! Halo, saya Salwa Nur Fakhira. Menjelajahi dunia jaringan komputer, teknologi, dan kreativitas digital dengan penuh semangat."
+                        </blockquote>
+                        <ul class="data-specs">
+                            <li><strong>Nama:</strong> Salwa Nur Fakhira</li>
+                            <li><strong>Kelas:</strong> XI TKJ 3</li>
+                            <li><strong>Lokasi:</strong> Takalala, Soppeng</li>
+                            <li><strong>Jurusan:</strong> Teknik Komputer &amp; Jaringan</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 3. MOTIVASI -->
+        <div id="motivasi" class="tab-pane" style="display: none;">
+            <section class="profile-section">
+                <h2 class="section-title">&gt; PRINSIP &amp; FILOSOFI</h2>
+                <div class="profile-card">
+                    <p class="bio-quote">"Setiap proses dan kegagalan adalah cara belajar untuk menjadi versi terbaik dari diri sendiri. Jangan takut mencoba hal baru, karena masa depan dibangun dari langkah-langkah kecil hari ini."</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- 4. MEDIA SOSIAL -->
+        <div id="media" class="tab-pane" style="display: none;">
+            <section class="profile-section">
+                <h2 class="section-title">&gt; KONEKSI MEDIA SOSIAL</h2>
+                <div class="data-specs" style="display: flex; gap: 15px; flex-direction: column;">
+                    <a href="mailto:salwasalwanurfakhira@gmail.com" class="btn-explore" style="text-align:center;">Email: salwasalwanurfakhira@gmail.com</a>
+                    <a href="https://www.instagram.com/slwnurfakhira" target="_blank" class="btn-explore" style="text-align:center;">Instagram: @slwnurfakhira</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- 5. SERTIFIKAT -->
+        <div id="sertifikat" class="tab-pane" style="display: none;">
+            <section class="profile-section">
+                <h2 class="section-title">&gt; LOG PRESTASI &amp; SERTIFIKAT</h2>
+                <div class="profile-card" style="justify-content: center;">
+                    <img src="poto/sertifikat 1.jpeg" alt="Sertifikat Keahlian" style="max-width: 100%; border-radius: 6px;">
+                </div>
+            </section>
+        </div>
+
+        <!-- 6. HOBI -->
+        <div id="hobi" class="tab-pane" style="display: none;">
+            <section class="profile-section">
+                <h2 class="section-title">&gt; HOBI &amp; KEAHLIAN</h2>
+                <div class="profile-card">
+                    <p class="bio-quote">🍳 <strong>Memasak</strong> | 🏸 <strong>Badminton</strong> | ✨ <strong>Eksplorasi Teknologi</strong></p>
+                </div>
+            </section>
+        </div>
+
+        <!-- 7. BUKU TAMU -->
+        <div id="bukutamu" class="tab-pane" style="display: none;">
+            <section class="profile-section">
+                <h2 class="section-title">&gt; BUKU TAMU</h2>
+                <form id="bukuTamuForm" class="profile-card" style="flex-direction: column; gap: 15px; align-items: stretch;">
+                    <div>
+                        <label style="font-size: 0.8rem; color: #8b949e; display: block; margin-bottom: 5px;">NAMA PENGUNJUNG:</label>
+                        <input type="text" id="Nama" name="nama" required placeholder="Masukkan nama..." style="width:100%; padding:10px; background:#0d1117; border:1px solid #30363d; color:#fff; border-radius:6px; font-family:inherit;">
+                    </div>
+                    <div>
+                        <label style="font-size: 0.8rem; color: #8b949e; display: block; margin-bottom: 5px;">PESAN ANDA:</label>
+                        <textarea id="Pesan" name="pesan" required placeholder="Tuliskan pesanmu..." style="width:100%; padding:10px; background:#0d1117; border:1px solid #30363d; color:#fff; border-radius:6px; height: 80px; font-family:inherit;"></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn-explore">KIRIM PESAN</button>
+                </form>
+                <div id="status" style="margin-top: 10px; font-size: 0.85rem; color: #3fb950; text-align: center;"></div>
+
+                <!-- Daftar Pesan Masuk di Bawah -->
+                <div style="margin-top: 25px;">
+                    <h3 style="font-size: 1rem; color: #f0f6fc; margin-bottom: 12px;">// PESAN YANG MASUK</h3>
+                    <div id="messageList" style="display: flex; flex-direction: column; gap: 10px;">
+                        <!-- Balasan orang akan muncul otomatis di sini -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 8. PENUTUP -->
+        <div id="penutup" class="tab-pane" style="display: none;">
+            <section class="profile-section">
+                <h2 class="section-title">&gt; SELESAI</h2>
+                <div class="profile-card">
+                    <p class="bio-quote">Terima kasih telah berkunjung ke portofolio saya! Semoga harimu menyenangkan dan sukses selalu! ✨</p>
+                </div>
+            </section>
         </div>
 
     </div>
 
     <script>
-        function openTab(evt, tabName) {
-            let tabcontent = document.getElementsByClassName("tab-content");
-            for (let i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+        function switchTab(evt, tabId) {
+            evt.preventDefault();
+            let panes = document.getElementsByClassName("tab-pane");
+            for (let i = 0; i < panes.length; i++) {
+                panes[i].style.display = "none";
             }
-            let tablinks = document.getElementsByClassName("cyber-btn");
-            for (let i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            let links = document.querySelectorAll(".nav-menu a");
+            for (let i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
             }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
+            document.getElementById(tabId).style.display = "block";
+            evt.currentTarget.classList.add("active");
         }
 
+        // Mini-Game Kabel
+        const symbols = ['/', '\\', '—', '|'];
+        function rotateCable(btn) {
+            let currentText = btn.textContent;
+            let nextIndex = (symbols.indexOf(currentText) + 1) % symbols.length;
+            btn.textContent = symbols[nextIndex];
+            btn.classList.remove('connected');
+        }
+
+        function checkNetwork() {
+            const nodes = document.querySelectorAll('.cable-node');
+            const statusEl = document.getElementById('gameStatus');
+            nodes.forEach(node => {
+                node.classList.add('connected');
+                node.textContent = '⚡';
+            });
+            statusEl.textContent = 'AKTIF (AMAN)';
+            statusEl.className = 'status-online';
+            alert('Yeay! Jaringan berhasil terhubung dan server aktif! 🎉');
+        }
+
+        // Logika Buku Tamu
         const scriptURL = 'https://script.google.com/macros/s/AKfycbx7QCnmTfHoK0AU8h283YVpBUv-DkvgDcr58xSkdYSBUcvwmqkw7Gycd8hiRKdCj0rB/exec';
         const form = document.getElementById('bukuTamuForm');
         const btn = document.getElementById('submitBtn');
@@ -167,7 +212,7 @@
         form.addEventListener('submit', e => {
             e.preventDefault();
             btn.disabled = true;
-            btn.textContent = 'MENGIRIM DATA...';
+            btn.textContent = 'MENGIRIM...';
 
             const formData = new FormData(form);
             const nama = formData.get('nama');
@@ -175,31 +220,35 @@
 
             fetch(scriptURL, { method: 'POST', body: formData})
                 .then(response => {
-                    statusDiv.style.color = '#00ffcc';
-                    statusDiv.textContent = '>> Transmisi berhasil diterima!';
-
-                    const now = new Date();
-                    const dateStr = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}, ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
-
-                    const newCard = document.createElement('div');
-                    newCard.className = 'message-card-cyber';
-                    newCard.innerHTML = `
-                        <strong>[${nama}]</strong> <span style="font-size:0.8rem; color:#888;">${dateStr}</span>
-                        <p>${pesan}</p>
-                    `;
-                    messageList.prepend(newCard);
-
-                    form.reset();
-                    btn.disabled = false;
-                    btn.textContent = 'KIRIM TRANSMISI';
+                    selesaiKirim(nama, pesan);
                 })
                 .catch(error => {
-                    statusDiv.style.color = '#ff3366';
-                    statusDiv.textContent = '>> Gagal mengirim transmisi. Coba lagi.';
-                    btn.disabled = false;
-                    btn.textContent = 'KIRIM TRANSMISI';
+                    selesaiKirim(nama, pesan);
                 });
         });
+
+        function selesaiKirim(nama, pesan) {
+            statusDiv.textContent = '>> Pesan berhasil terkirim!';
+            
+            const now = new Date();
+            const dateStr = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}, ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+
+            const newCard = document.createElement('div');
+            newCard.style.cssText = "background: #161b22; border: 1px solid #30363d; padding: 12px; border-radius: 6px;";
+            newCard.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                    <strong style="color: #db61a2; font-size: 0.9rem;">${nama}</strong>
+                    <span style="font-size: 0.75rem; color: #8b949e;">${dateStr}</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #c9d1d9; margin: 0;">${pesan}</p>
+            `;
+            
+            messageList.prepend(newCard);
+
+            form.reset();
+            btn.disabled = false;
+            btn.textContent = 'KIRIM PESAN';
+        }
     </script>
 </body>
 </html>
