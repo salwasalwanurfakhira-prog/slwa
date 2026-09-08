@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio - Salwa Nur Fakhira</title>
     <!-- Jalur CSS sesuai folder kamu -->
-    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="CSS/style.css"
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
@@ -36,6 +36,7 @@
             <button class="menu-btn" onclick="openTab(event, 'media')">Media</button>
             <button class="menu-btn" onclick="openTab(event, 'sertifikat')">Sertifikat</button>
             <button class="menu-btn" onclick="openTab(event, 'hobi')">Hobi</button>
+            <button class="menu-btn" onclick="openTab(event, 'bukutamu')">Buku Tamu</button>
             <button class="menu-btn" onclick="openTab(event, 'penutup')">Penutup</button>
         </div>
 
@@ -43,7 +44,7 @@
         <div id="profil" class="content-box tab-content" style="display: block;">
             <div class="profile-card">
                 <div class="profile-img-container">
-                    <img src="09.jpeg" alt="poto salwa nur fakhira">
+                    <img src="09.jpeg" alt="09.jpeg">
                 </div>
                 <h2>Salwa Nur Fakhira</h2>
                 <p class="sub-text">SISWI XI TKJ 3</p>
@@ -62,7 +63,7 @@
                 <h3>Data Diri</h3>
                 <p><strong>Tanggal Lahir:</strong> 16 Agustus 2009</p>
                 <p><strong>Alamat:</strong> Takalala</p>
-                <p><strong>Sekolah:</strong>  SMKN 3 Soppeng</p>
+                <p><strong>Sekolah:</strong> UPT SMKN 3Soppeng</p>
                 <p><strong>Jurusan:</strong> Teknik Komputer dan Jaringan (TKJ)</p>
             </div>
         </div>
@@ -92,7 +93,7 @@
                    <a href="https://www.instagram.com/slwnurfakhira" target="_blank" style="color: #e096b6; text-decoration: none;">@slwnurfakhira</a>
                 </p>
                 <p><strong>TikTok:</strong><br> 
-                   <a href="https://tiktok.com/salwanurfakhira00?" target="_blank" style="color: #e096b6; text-decoration: none;">Cek TikTok Saya</a>
+                   <a href="https://tiktok.com/slwanurfakhira" target="_blank" style="color: #e096b6; text-decoration: none;">Cek TikTok Saya</a>
                 </p>
             </div>
         </div>
@@ -102,7 +103,8 @@
             <h2>Sertifikasi & Prestasi</h2>
             <p class="sub-text">PORTFOLIO KEAHLIAN</p>
             <div class="info-list">
-                <p><strong>Sertifikat Keahlian:</strong> </p>
+                <p><strong>Sertifikat Keahlian:</strong></p>
+                <img src="poto/sertifikat 1.jpeg" alt="poto sertifikat" style="width: 100%; border-radius: 8px; margin-top: 10px;">
             </div>
         </div>
 
@@ -115,7 +117,27 @@
             </div>
         </div>
 
-        <!-- Isi Menu 6: Penutup -->
+        <!-- Isi Menu 6: Buku Tamu -->
+        <div id="bukutamu" class="content-box tab-content" style="display: none;">
+            <h2>Buku Tamu Digital</h2>
+            <p class="sub-text">TINGGALKAN PESAN</p>
+            <div class="info-list">
+                <form id="bukuTamuForm" style="margin-top: 15px;">
+                    <div style="margin-bottom: 15px;">
+                        <label for="Nama" style="display: block; margin-bottom: 5px; font-weight: bold;">Nama:</label>
+                        <input type="text" id="Nama" name="Nama" required placeholder="Masukkan nama kamu..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="Pesan" style="display: block; margin-bottom: 5px; font-weight: bold;">Pesan:</label>
+                        <textarea id="Pesan" name="Pesan" required placeholder="Tulis pesan atau kesan..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; height: 100px; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" style="width: 100%; padding: 12px; background-color: #4CAF50; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Kirim Pesan</button>
+                </form>
+                <div id="status" style="text-align: center; margin-top: 15px; font-size: 14px;"></div>
+            </div>
+        </div>
+
+        <!-- Isi Menu 7: Penutup -->
         <div id="penutup" class="content-box tab-content" style="display: none;">
             <h2>Salam Penutup</h2>
             <p class="sub-text">TERIMA KASIH</p>
@@ -126,7 +148,7 @@
 
     </div>
 
-    <!-- Script Pindah Menu -->
+    <!-- Script Pindah Menu & Pengiriman Buku Tamu -->
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
@@ -141,6 +163,33 @@
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
         }
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwLdwDh_OKANnk8UGPcsAX5moSMA8BqPhiKp9Nv_Xji0Ye3sHfGrWEI8Q1-rk11PF9C/exec';
+        const form = document.getElementById('bukuTamuForm');
+        const btn = document.getElementById('submitBtn');
+        const statusDiv = document.getElementById('status');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            btn.disabled = true;
+            btn.textContent = 'Mengirim...';
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    statusDiv.style.color = 'green';
+                    statusDiv.textContent = 'Terima kasih! Pesan berhasil dikirim.';
+                    form.reset();
+                    btn.disabled = false;
+                    btn.textContent = 'Kirim Pesan';
+                })
+                .catch(error => {
+                    statusDiv.style.color = 'red';
+                    statusDiv.textContent = 'Gagal mengirim pesan, Coba lagi.';
+                    btn.disabled = false;
+                    btn.textContent = 'Kirim Pesan';
+                    console.error('Error!', error.message);
+                });
+        });
     </script>
 
 </body>
