@@ -3,182 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio - Salwa Nur Fakhira</title>
-    <!-- Jalur CSS sesuai folder kamu -->
-    <link rel="stylesheet" href="style.css"> 
+    <title>CyberProfile // Salwa Nur Fakhira</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Status Header -->
-        <div class="status-bar">
-            <span class="dot"></span> SYSTEM ONLINE
-        </div>
+    <div class="scanline"></div>
 
-        <p class="tagline"> WELCOME TO MY PORTOFOLIO </p>
-        <h1 class="glow-text">SALWA NUR<br>FAKHIRA</h1>
-
-        <p class="desc">
-            Selamat datang di ruang digital saya! Tempat membagikan pengalaman, keahlian, dan minat.
-        </p>
-
-        <div class="glow-line"></div>
-
-        <!-- Judul Menu -->
-        <div class="menu-title">
-            <span>&lt;/&gt;</span> JELAJAHI PROFIL
-        </div>
-
-        <!-- Tombol Pilihan Menu -->
-        <div class="menu-grid">
-            <button class="menu-btn active" onclick="openTab(event, 'profil')">Profil</button>
-            <button class="menu-btn" onclick="openTab(event, 'motivasi')">Motivasi</button>
-            <button class="menu-btn" onclick="openTab(event, 'media')">Media</button>
-            <button class="menu-btn" onclick="openTab(event, 'sertifikat')">Sertifikat</button>
-            <button class="menu-btn" onclick="openTab(event, 'hobi')">Hobi</button>
-            <button class="menu-btn" onclick="openTab(event, 'bukutamu')">Buku Tamu</button>
-            <button class="menu-btn" onclick="openTab(event, 'penutup')">Penutup</button>
-        </div>
-
-        <!-- Isi Menu 1: Profil -->
-        <div id="profil" class="content-box tab-content" style="display: block;">
-            <div class="profile-card">
-                <div class="profile-img-container">
-                    <img src="09.jpeg" alt="Foto Salwa Nur Fakhira">
-                </div>
-                <h2>Salwa Nur Fakhira</h2>
-                <p class="sub-text">SISWI XI TKJ 3</p>
+    <div class="cyber-container">
+        <div class="terminal-header">
+            <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
             </div>
-            
-            <!-- Perkenalan / Tentang Saya -->
-            <div class="bio-box">
-                <h3>Tentang Saya</h3>
-                <p class="bio">
-                    Halo! Saya SALWA NUR FAKHIRA dari SMKN 3 SOPPENG. Selamat datang di portofolio saya! Tempat saya berbagi cerita tentang proses belajar, hobi, dan hal-hal menarik lainnya.
-                </p>
-            </div>
-
-            <!-- Data Diri -->
-            <div class="info-list">
-                <h3>Data Diri</h3>
-                <p><strong>Tanggal Lahir:</strong> 16 Agustus 2009</p>
-                <p><strong>Alamat:</strong> Takalala</p>
-                <p><strong>Sekolah:</strong> UPT SMKN 3 Soppeng</p>
-                <p><strong>Jurusan:</strong> Teknik Komputer dan Jaringan (TKJ)</p>
+            <div class="system-status">
+                <span class="pulse-dot"></span> ROOT@SALWA-TKJ:~$ ACTIVE
             </div>
         </div>
 
-        <!-- Isi Menu 2: Motivasi -->
-        <div id="motivasi" class="content-box tab-content" style="display: none;">
-            <h2>Motivasi Hidup</h2>
-            <p class="sub-text">MOTTO & PRINSIP</p>
-            <p class="bio" style="font-style: italic; color: #e096b6;">
-                "Setiap proses dan kegagalan adalah cara belajar untuk menjadi versi terbaik dari diri sendiri. Jangan takut mencoba hal baru, karena masa depan dibangun dari langkah-langkah kecil hari ini."
+        <div class="hero-section">
+            <p class="matrix-tag">&gt;&gt; SYSTEM_INITIALIZED</p>
+            <h1 class="glitch-title" data-text="SALWA NUR FAKHIRA">SALWA NUR<br><span>FAKHIRA</span></h1>
+            <p class="cyber-desc">
+                [ SISWI UPT SMKN 3 SOPPENG // JURUSAN TKJ ]<br>
+                Mengeksplorasi dunia jaringan, teknologi, dan kreativitas digital.
             </p>
-            <div class="info-list" style="margin-top: 15px;">
-                <p><strong>Prinsip Utama:</strong> Terus belajar, pantang menyerah, dan tetap rendah hati.</p>
-                <p><strong>Pesan Inspiratif:</strong> Kunci keberhasilan bukan hanya tentang seberapa pintar kita, tetapi seberapa konsisten kita dalam berjuang.</p>
-            </div>
         </div>
 
-        <!-- Isi Menu 3: Link Media -->
-        <div id="media" class="content-box tab-content" style="display: none;">
-            <h2>Kontak & Media Sosial</h2>
-            <p class="sub-text">HUBUNGI SAYA</p>
-            <div class="info-list">
-                <p><strong>Google / Email:</strong><br> 
-                   <a href="mailto:salwasalwanurfakhira@gmail.com" style="color: #e096b6; text-decoration: none;">salwasalwanurfakhira@gmail.com</a>
-                </p>
-                <p><strong>Instagram:</strong><br> 
-                   <a href="https://www.instagram.com/slwnurfakhira" target="_blank" style="color: #e096b6; text-decoration: none;">@slwnurfakhira</a>
-                </p>
-                <p><strong>TikTok:</strong><br> 
-                   <a href="https://tiktok.com/slwanurfakhira" target="_blank" style="color: #e096b6; text-decoration: none;">Cek TikTok Saya</a>
-                </p>
-            </div>
+        <div class="nav-grid">
+            <button class="cyber-btn active" onclick="openTab(event, 'profil')">01. Profil</button>
+            <button class="cyber-btn" onclick="openTab(event, 'motivasi')">02. Motivasi</button>
+            <button class="cyber-btn" onclick="openTab(event, 'media')">03. Media</button>
+            <button class="cyber-btn" onclick="openTab(event, 'sertifikat')">04. Sertifikat</button>
+            <button class="cyber-btn" onclick="openTab(event, 'hobi')">05. Hobi</button>
+            <button class="cyber-btn" onclick="openTab(event, 'bukutamu')">06. Buku Tamu</button>
+            <button class="cyber-btn" onclick="openTab(event, 'penutup')">07. Exit</button>
         </div>
 
-        <!-- Isi Menu 4: Sertifikat -->
-        <div id="sertifikat" class="content-box tab-content" style="display: none;">
-            <h2>Sertifikasi & Prestasi</h2>
-            <p class="sub-text">PORTFOLIO KEAHLIAN</p>
-            <div class="info-list">
-                <p><strong>Sertifikat Keahlian:</strong></p>
-                <img src="poto/sertifikat 1.jpeg" alt="poto sertifikat" style="width: 100%; border-radius: 8px; margin-top: 10px;">
-            </div>
-        </div>
-
-        <!-- Isi Menu 5: Hobi -->
-        <div id="hobi" class="content-box tab-content" style="display: none;">
-            <h2>Minat & Hobi</h2>
-            <p class="sub-text">KEGIATAN FAVORIT</p>
-            <div class="info-list">
-                <p><strong>Hobi/Aktivitas di luar sekolah:</strong> Memasak 🍳, Bermain Badminton 🏸, serta mencoba hal-hal menarik baru ✨</p>
-            </div>
-        </div>
-
-        <!-- Isi Menu 6: Buku Tamu -->
-        <div id="bukutamu" class="content-box tab-content" style="display: none;">
-            <h2>Buku Tamu Digital</h2>
-            <p class="sub-text">TINGGALKAN PESAN</p>
-            <div class="info-list">
-                <form id="bukuTamuForm" style="margin-top: 15px;">
-                    <div style="margin-bottom: 15px;">
-                        <label for="Nama" style="display: block; margin-bottom: 5px; font-weight: bold;">Nama Lengkap:</label>
-                        <input type="text" id="Nama" name="nama" required placeholder="Masukkan nama Anda..." style="width: 100%; padding: 10px; border: 1px solid #523348; background: #140d13; color: #fff; border-radius: 6px; box-sizing: border-box;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <label for="Email" style="display: block; margin-bottom: 5px; font-weight: bold;">Alamat Email:</label>
-                        <input type="email" id="Email" name="email" required placeholder="Masukkan email Anda..." style="width: 100%; padding: 10px; border: 1px solid #523348; background: #140d13; color: #fff; border-radius: 6px; box-sizing: border-box;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <label for="Pesan" style="display: block; margin-bottom: 5px; font-weight: bold;">Komentar / Pesan:</label>
-                        <textarea id="Pesan" name="pesan" required placeholder="Tuliskan pesan Anda..." style="width: 100%; padding: 10px; border: 1px solid #523348; background: #140d13; color: #fff; border-radius: 6px; box-sizing: border-box; height: 100px; resize: vertical;"></textarea>
-                    </div>
-                    <button type="submit" id="submitBtn" style="width: 100%; padding: 12px; background-color: #5842c3; color: white; border: none; border-radius: 25px; font-weight: bold; cursor: pointer;">Kirim Pesan</button>
-                </form>
-                <div id="status" style="text-align: center; margin-top: 15px; font-size: 14px;"></div>
-
-                <!-- Bagian Daftar Pesan dari Pengunjung -->
-                <div style="margin-top: 30px; text-align: left;">
-                    <h3 style="margin-bottom: 15px; color: #e096b6;">💬 Pesan dari Pengunjung</h3>
-                    <div id="messageList">
-                        <!-- Pesan yang dikirim akan muncul di sini secara dinamis -->
-                    </div>
+        <div id="profil" class="panel-content tab-content" style="display: block;">
+            <div class="profile-layout">
+                <div class="avatar-frame">
+                    <img src="09.jpeg" alt="Salwa Nur Fakhira">
+                    <div class="corner-tl"></div>
+                    <div class="corner-br"></div>
+                </div>
+                <div class="bio-data">
+                    <h3>&gt; IDENTITAS_PENGGUNA</h3>
+                    <p class="bio-text">
+                        Halo! Saya Salwa Nur Fakhira. Selamat datang di portofolio digital saya yang dirancang dengan gaya terminal interaktif. Tempat saya berbagi proses belajar, keahlian, dan hobi.
+                    </p>
+                    <ul class="data-list">
+                        <li><span>NAMA:</span> Salwa Nur Fakhira</li>
+                        <li><span>KELAS:</span> XI TKJ 3</li>
+                        <li><span>LAHIR:</span> 16 Agustus 2009</li>
+                        <li><span>LOKASI:</span> Takalala, Soppeng</li>
+                        <li><span>INSTITUSI:</span> UPT SMKN 3 Soppeng</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Isi Menu 7: Penutup -->
-        <div id="penutup" class="content-box tab-content" style="display: none;">
-            <h2>Salam Penutup</h2>
-            <p class="sub-text">TERIMA KASIH</p>
-            <div class="info-list">
-                <p>Terima kasih telah berkunjung ke halaman portofolio saya. Semoga harimu menyenangkan dan sukses selalu! ✨</p>
+        <div id="motivasi" class="panel-content tab-content" style="display: none;">
+            <h3>&gt; PRINSIP_ &_MOTTO</h3>
+            <div class="quote-box">
+                <p>
+                    "Setiap proses dan kegagalan adalah cara belajar untuk menjadi versi terbaik dari diri sendiri. Jangan takut mencoba hal baru, karena masa depan dibangun dari langkah-langkah kecil hari ini."
+                </p>
+            </div>
+            <ul class="data-list" style="margin-top: 20px;">
+                <li><span>PRINSIP:</span> Terus belajar, pantang menyerah, dan tetap rendah hati.</li>
+                <li><span>ESENSI:</span> Konsistensi adalah kunci utama keberhasilan di bidang apa pun.</li>
+            </ul>
+        </div>
+
+        <div id="media" class="panel-content tab-content" style="display: none;">
+            <h3>&gt; KONEKSI_JARINGAN</h3>
+            <div class="social-grid">
+                <a href="mailto:salwasalwanurfakhira@gmail.com" class="social-node">
+                    <span class="node-title">EMAIL</span>
+                    <span class="node-link">salwasalwanurfakhira@gmail.com</span>
+                </a>
+                <a href="https://www.instagram.com/slwnurfakhira" target="_blank" class="social-node">
+                    <span class="node-title">INSTAGRAM</span>
+                    <span class="node-link">@slwnurfakhira</span>
+                </a>
+                <a href="https://tiktok.com/slwanurfakhira" target="_blank" class="social-node">
+                    <span class="node-title">TIKTOK</span>
+                    <span class="node-link">Cek TikTok Saya</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="sertifikat" class="panel-content tab-content" style="display: none;">
+            <h3>&gt; LOG_PRESTASI_&_KEAHLIAN</h3>
+            <div class="cert-box">
+                <img src="poto/sertifikat 1.jpeg" alt="Sertifikat Keahlian">
+            </div>
+        </div>
+
+        <div id="hobi" class="panel-content tab-content" style="display: none;">
+            <h3>&gt; BACKGROUND_PROCESS (HOBI)</h3>
+            <div class="quote-box">
+                <p>🍳 Memasak | 🏸 Bermain Badminton | ✨ Mengeksplorasi Teknologi & Hal Baru</p>
+            </div>
+        </div>
+
+        <div id="bukutamu" class="panel-content tab-content" style="display: none;">
+            <h3>&gt; INPUT_PESAN_PENGUNJUNG</h3>
+            <form id="bukuTamuForm" class="cyber-form">
+                <div class="form-group">
+                    <label for="Nama">NAMA PENGUNJUNG:</label>
+                    <input type="text" id="Nama" name="nama" required placeholder="Masukkan nama...">
+                </div>
+                <div class="form-group">
+                    <label for="Email">ALAMAT EMAIL:</label>
+                    <input type="email" id="Email" name="email" required placeholder="Masukkan email...">
+                </div>
+                <div class="form-group">
+                    <label for="Pesan">PESAN / KOMENTAR:</label>
+                    <textarea id="Pesan" name="pesan" required placeholder="Tuliskan pesanmu di sini..."></textarea>
+                </div>
+                <button type="submit" id="submitBtn" class="cyber-submit-btn">KIRIM TRANSMISI</button>
+            </form>
+            <div id="status" class="status-msg"></div>
+
+            <div class="visitor-section">
+                <h4>// TRANSMISI MASUK</h4>
+                <div id="messageList"></div>
+            </div>
+        </div>
+
+        <div id="penutup" class="panel-content tab-content" style="display: none;">
+            <h3>&gt; SESSION_TERMINATED</h3>
+            <div class="quote-box">
+                <p>Terima kasih telah mengakses portofolio saya. Semoga harimu menyenangkan dan sukses selalu! ✨</p>
             </div>
         </div>
 
     </div>
 
-    <!-- Script Pindah Menu & Pengiriman Buku Tamu -->
     <script>
         function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
+            let tabcontent = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
-            tablinks = document.getElementsByClassName("menu-btn");
-            for (i = 0; i < tablinks.length; i++) {
+            let tablinks = document.getElementsByClassName("cyber-btn");
+            for (let i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
         }
 
-        // URL Google Apps Script yang baru diperbarui
         const scriptURL = 'https://script.google.com/macros/s/AKfycbx7QCnmTfHoK0AU8h283YVpBUv-DkvgDcr58xSkdYSBUcvwmqkw7Gycd8hiRKdCj0rB/exec';
-        
         const form = document.getElementById('bukuTamuForm');
         const btn = document.getElementById('submitBtn');
         const statusDiv = document.getElementById('status');
@@ -187,7 +167,7 @@
         form.addEventListener('submit', e => {
             e.preventDefault();
             btn.disabled = true;
-            btn.textContent = 'Mengirim...';
+            btn.textContent = 'MENGIRIM DATA...';
 
             const formData = new FormData(form);
             const nama = formData.get('nama');
@@ -195,36 +175,31 @@
 
             fetch(scriptURL, { method: 'POST', body: formData})
                 .then(response => {
-                    statusDiv.style.color = '#e096b6';
-                    statusDiv.textContent = 'Terima kasih! Pesan berhasil dikirim.';
+                    statusDiv.style.color = '#00ffcc';
+                    statusDiv.textContent = '>> Transmisi berhasil diterima!';
 
-                    // Format tanggal otomatis saat pesan dikirim
                     const now = new Date();
-                    const dateStr = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}, ${now.getHours().toString().padStart(2, '0')}.${now.getMinutes().toString().padStart(2, '0')}.${now.getSeconds().toString().padStart(2, '0')}`;
+                    const dateStr = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}, ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
 
-                    // Buat elemen kartu pesan baru dan masukkan ke daftar
                     const newCard = document.createElement('div');
-                    newCard.className = 'message-card';
+                    newCard.className = 'message-card-cyber';
                     newCard.innerHTML = `
-                        <strong>${nama}</strong>
-                        <span>${dateStr}</span>
+                        <strong>[${nama}]</strong> <span style="font-size:0.8rem; color:#888;">${dateStr}</span>
                         <p>${pesan}</p>
                     `;
                     messageList.prepend(newCard);
 
                     form.reset();
                     btn.disabled = false;
-                    btn.textContent = 'Kirim Pesan';
+                    btn.textContent = 'KIRIM TRANSMISI';
                 })
                 .catch(error => {
-                    statusDiv.style.color = '#ff6b6b';
-                    statusDiv.textContent = 'Gagal mengirim pesan, Coba lagi.';
+                    statusDiv.style.color = '#ff3366';
+                    statusDiv.textContent = '>> Gagal mengirim transmisi. Coba lagi.';
                     btn.disabled = false;
-                    btn.textContent = 'Kirim Pesan';
-                    console.error('Error!', error.message);
+                    btn.textContent = 'KIRIM TRANSMISI';
                 });
         });
     </script>
-
 </body>
 </html>
