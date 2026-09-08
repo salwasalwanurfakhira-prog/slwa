@@ -202,3 +202,33 @@ body {
 .info-list strong {
     color: #ffffff;
 }
+
+/* Styling Kartu Pesan Buku Tamu (Baru) */
+.message-card {
+    background: #1c1119;
+    border: 1px solid #42293b;
+    border-left: 4px solid #5842c3;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.message-card strong {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.message-card span {
+    display: block;
+    font-size: 11px;
+    color: #a88798;
+    margin-bottom: 8px;
+}
+
+.message-card p {
+    margin: 0;
+    color: #d1b8c5;
+    font-size: 13px;
+    word-break: break-word;
+}
