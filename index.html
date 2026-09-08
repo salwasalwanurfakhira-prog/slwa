@@ -44,7 +44,7 @@
         <div id="profil" class="content-box tab-content" style="display: block;">
             <div class="profile-card">
                 <div class="profile-img-container">
-                    <img src="09.jpeg" alt="09.jpeg">
+                    <img src="09.jpeg" alt="Foto Salwa Nur Fakhira">
                 </div>
                 <h2>Salwa Nur Fakhira</h2>
                 <p class="sub-text">SISWI XI TKJ 3</p>
@@ -54,7 +54,7 @@
             <div class="bio-box">
                 <h3>Tentang Saya</h3>
                 <p class="bio">
-                    Halo! Saya SALWA NUR FAKHIRA dari SMKN 3 SOPPENG.selamat datang di portopolio saya! tempat saya berbagi cerita tentang proses belajar,hoby dan hal hal yang menarik lainnya.
+                    Halo! Saya SALWA NUR FAKHIRA dari SMKN 3 SOPPENG. Selamat datang di portofolio saya! Tempat saya berbagi cerita tentang proses belajar, hobi, dan hal-hal menarik lainnya.
                 </p>
             </div>
 
@@ -63,7 +63,7 @@
                 <h3>Data Diri</h3>
                 <p><strong>Tanggal Lahir:</strong> 16 Agustus 2009</p>
                 <p><strong>Alamat:</strong> Takalala</p>
-                <p><strong>Sekolah:</strong> UPT SMKN 3Soppeng</p>
+                <p><strong>Sekolah:</strong> UPT SMKN 3 Soppeng</p>
                 <p><strong>Jurusan:</strong> Teknik Komputer dan Jaringan (TKJ)</p>
             </div>
         </div>
@@ -113,7 +113,7 @@
             <h2>Minat & Hobi</h2>
             <p class="sub-text">KEGIATAN FAVORIT</p>
             <div class="info-list">
-                <p><strong>hoby/aktivitas di luar sekolah:</strong> Memasak 🍳, Bermain Badminton 🏸, serta mencoba hal-hal menarik baru ✨</p>
+                <p><strong>Hobi/Aktivitas di luar sekolah:</strong> Memasak 🍳, Bermain Badminton 🏸, serta mencoba hal-hal menarik baru ✨</p>
             </div>
         </div>
 
@@ -125,11 +125,11 @@
                 <form id="bukuTamuForm" style="margin-top: 15px;">
                     <div style="margin-bottom: 15px;">
                         <label for="Nama" style="display: block; margin-bottom: 5px; font-weight: bold;">Nama:</label>
-                        <input type="text" id="Nama" name="Nama" required placeholder="Masukkan nama kamu..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+                        <input type="text" id="Nama" name="nama" required placeholder="Masukkan nama kamu..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
                     </div>
                     <div style="margin-bottom: 15px;">
                         <label for="Pesan" style="display: block; margin-bottom: 5px; font-weight: bold;">Pesan:</label>
-                        <textarea id="Pesan" name="Pesan" required placeholder="Tulis pesan atau kesan..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; height: 100px; resize: vertical;"></textarea>
+                        <textarea id="Pesan" name="pesan" required placeholder="Tulis pesan atau kesan..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; height: 100px; resize: vertical;"></textarea>
                     </div>
                     <button type="submit" id="submitBtn" style="width: 100%; padding: 12px; background-color: #4CAF50; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Kirim Pesan</button>
                 </form>
@@ -164,7 +164,9 @@
             evt.currentTarget.className += " active";
         }
 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwLdwDh_OKANnk8UGPcsAX5moSMA8BqPhiKp9Nv_Xji0Ye3sHfGrWEI8Q1-rk11PF9C/exec';
+        // URL Google Apps Script yang baru diperbarui
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx7QCnmTfHoK0AU8h283YVpBUv-DkvgDcr58xSkdYSBUcvwmqkw7Gycd8hiRKdCj0rB/exec';
+        
         const form = document.getElementById('bukuTamuForm');
         const btn = document.getElementById('submitBtn');
         const statusDiv = document.getElementById('status');
